@@ -1,0 +1,6 @@
+Units used in code:
+
+length - cm
+time - s
+energy - MeV
+mass - MeV/c^2
