@@ -25,14 +25,24 @@ void Particle::setKineticEnergy(float _kineticEnergy)
     kineticEnergy = _kineticEnergy;
 }
 
-Vec3<float> Particle::getDirection()
+Vec3<float> Particle::getMomentumDirection()
 {
-    return direction;
+    return momentumDirection;
 }
 
-void Particle::setDirection(Vec3<float> _direction)
+void Particle::setMomentumDirection(Vec3<float> _momentumDirection)
 {
-    direction = _direction;
+    momentumDirection = _momentumDirection;
+}
+
+float Particle::getMomentumMagnitude()
+{
+    return momentumMagnitude;
+}
+
+void Particle::setMomentumMagnitude(float _momentumMagnitude)
+{
+    momentumMagnitude = _momentumMagnitude;
 }
 
 unsigned int Particle::getNParticles()
