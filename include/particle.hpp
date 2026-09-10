@@ -8,16 +8,19 @@ private:
     Vec3<float> position;
     float kineticEnergy;
     Vec3<float> direction;
+    unsigned int nParticles;
 
 public:
     Particle(
         PType _type,
         Vec3<float> _position={0.0f, 0.0f, 0.0f},
         float _kineticEnergy=0.0f,
-        Vec3<float> _direction={0.0f, 0.0f, 0.0f}
+        Vec3<float> _direction={0.0f, 0.0f, 0.0f},
+        int _nParticles = 1
     ) :
         type(_type),
         position(_position),
         kineticEnergy(_kineticEnergy),
-        direction(_direction) {}
+        direction(_direction),
+        nParticles(_nParticles) {}
 };
