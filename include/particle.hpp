@@ -23,4 +23,14 @@ public:
         kineticEnergy(_kineticEnergy),
         direction(_direction),
         nParticles(_nParticles) {}
+    
+    PType getType();
+    Vec3<float> getPosition();
+    void setPosition(Vec3<float> _position);
+    float getKineticEnergy();
+    void setKineticEnergy(float _kineticEnergy);
+    Vec3<float> getDirection();
+    void setDirection(Vec3<float> _direction);
+    unsigned int getNParticles();
+    void setNParticles(unsigned int _nParticles);
 };
