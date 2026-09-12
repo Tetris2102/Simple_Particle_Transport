@@ -1,5 +1,3 @@
-
-
 template <typename T>
 struct Vec3
 {

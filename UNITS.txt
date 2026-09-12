@@ -4,3 +4,4 @@ length - cm
 time - s
 energy - MeV
 mass - MeV/c^2
+charge - charges of proton (e.g. charge of electron is -1)
