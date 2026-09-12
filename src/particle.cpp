@@ -1,8 +1,13 @@
 #include "particle.hpp"
 
-PType Particle::getType()
+PName Particle::getType()
 {
     return type;
+}
+
+PInfo Particle::getProperties()
+{
+    return properties;
 }
 
 Vec3<float> Particle::getPosition()

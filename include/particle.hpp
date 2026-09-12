@@ -1,10 +1,14 @@
+#ifndef PARTICLE_HPP
+#define PARTICLE_HPP
+
 #include "enums.hpp"
 #include "vec3.hpp"
 
 class Particle
 {
 private:
-    PType type;
+    PName type;
+    PInfo properties;
     Vec3<float> position;
     float kineticEnergy;
     float momentumMagnitude;  // Magnitude of momentum
@@ -13,21 +17,25 @@ private:
 
 public:
     Particle(
-        PType _type,
+        PName _type,
         Vec3<float> _position={0.0f, 0.0f, 0.0f},
         float _kineticEnergy=0.0f,
         float _momentumMagnitude=0.0f,
         Vec3<float> _momentumDirection={0.0f, 0.0f, 0.0f},
-        int _nParticles = 1
+        unsigned int _nParticles = 1
     ) :
         type(_type),
         position(_position),
         kineticEnergy(_kineticEnergy),
         momentumMagnitude(_momentumMagnitude),
         momentumDirection(_momentumDirection),
-        nParticles(_nParticles) {}
+        nParticles(_nParticles)
+    {
+        properties = particleProperties[static_cast<int>(_type)];
+    }
     
-    PType getType();
+    PName getType();
+    PInfo getProperties();
 
     Vec3<float> getPosition();
     void setPosition(Vec3<float> _position);
@@ -44,3 +52,5 @@ public:
     unsigned int getNParticles();
     void setNParticles(unsigned int _nParticles);
 };
+
+#endif // PARTICLE_HPP
